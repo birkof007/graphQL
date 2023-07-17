@@ -1,0 +1,22 @@
+query{
+  __schema {
+    types {
+      name
+      kind
+      description
+      specifiedByUrl
+      fields {
+        name
+        type {
+          name
+          kind
+          ofType {
+            name
+            description
+            specifiedByUrl
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+query {
+  groups {
+    nodes {
+      name
+      groupMembers {
+        nodes {
+          user {
+            name
+          }
+        }
+      }
+      projects {
+        nodes {
+          name
+          description
+          createdAt
+          statistics {
+            commitCount
+          }
+          projectMembers {
+            nodes {
+              user {
+                name
+              }
+            }
+          }
+          pipelines {
+           nodes {
+            id
+            startedAt
+            finishedAt
+            status
+           }
+          }
+          mergeRequests {
+            count
+            nodes {
+              id
+              title
+              description
+              state
+            }
+          }
+        }
+      }
+      issues {
+        nodes {
+          title
+          description
+          state
+          webUrl
+        }
+      }
+      releases {
+        nodes {
+          name
+          description
+        }
+      }
+    }
+  }
+}
